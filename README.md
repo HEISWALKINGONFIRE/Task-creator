@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+List is an application to create a task.
+it has the functionality to add, edit, delete, update and complete task.
+try it out here:"http://list-clone.herokuapp.com/"
