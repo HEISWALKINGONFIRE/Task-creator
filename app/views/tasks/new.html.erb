@@ -1,0 +1,22 @@
+<center>
+<h1>create new task</h1>
+
+
+  <%=form_for @task do |t|%>
+      <%=t.label :name%>
+      <br />
+      <%=t.text_field :name%>
+      <br />
+      <br />
+      <%=t.label :description%>
+      <br />
+      <%=t.text_field :description%>
+      <br/>
+      <br/>
+
+      <%=t.submit%>
+  <%end%>
+  <br />
+  <a href="/#"><button>Back</button></a>
+
+</center>

@@ -1,0 +1,40 @@
+<center>
+  <h1>List All</h1>
+  <div class="create_task">
+    <a href="/tasks/new" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-plus-sign"></span>
+        </a>
+
+  </div>
+
+  <%@task.order(id: :DESC).each do |t|%>
+  <!-- <ul>
+    <li> -->
+      <div class="box">
+        <ol class="each">
+          <h>name:</h>
+          <br />
+          <%=t.name%>
+          <br>
+          <br />
+          <h>description:</h>
+          <br>
+          <%=t.description%>
+          <br>
+          <br />
+          Task completed: <%=t.completed%>
+          <br>
+          <!-- <%= button_to "completed",t ,:method => :boolean, form_class: "completed",:remote =>true%> -->
+          <div class="buttons">
+            <%= link_to "<button>Delete</button>".html_safe,t, :method => :delete%>
+            <%= link_to "<button>Edit</button>".html_safe,edit_task_path(t)%>
+            <!-- <%= button_to "Completed?",t,:method => :boolean, form_class: "completed",:remote =>true%> -->
+            <%= link_to "<button>Completed?</button>".html_safe,t,:method=>:boolean%>
+          </div>
+          <br />
+        </ol>
+
+      <%end%>
+    <!-- </li>
+  </ul> -->
+</center>
